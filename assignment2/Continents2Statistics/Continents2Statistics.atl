@@ -1,0 +1,41 @@
+-- @path Families=/Continents2Statistics/Continents.ecore
+-- @path Persons=/Continents2Statistics/Statistics.ecore
+
+module Continents2Statistics;
+create OUT: Statistics from IN: Continents;
+
+ 
+ helper context Continents!Continent def : getPopulation () : Real =
+ 		self.Country -> collect(c | c.population)->
+		iterate(pop; acc : Real  = 0 |
+		acc + pop) ;
+ 
+  helper context Continents!Continent def : getGdp () : Real =
+ 		self.Country -> collect(c | c.gdp)->
+		iterate(g; acc : Real  = 0 |
+		acc + g)/self.Country -> size() ;
+  
+helper context Continents!Continent def : getCostOfLiving () : Real =
+	self.Country -> collect(c | c.costOfLiving)->
+	iterate(col; acc : Real  = 0 |
+	acc + col) /self.Country -> size();
+
+helper context Continents!Continent def : getPovertyLine () : Real =
+	self.Country -> collect(c | c.povertyLine)->
+	iterate(pl; acc : Real  = 0 |
+	acc + pl)/self.Country -> size() ;
+
+
+
+rule Continent2QTS {
+	from
+	c : Continents!Continent
+	to
+	out : Statistics!QTSContinent (
+		name <- c.name,
+		population <- c.getPopulation(),
+		gdp <- c.getGdp(),
+		costOfLiving <- c.getCostOfLiving(),
+		povertyLine <- c.getPovertyLine()
+ )
+}

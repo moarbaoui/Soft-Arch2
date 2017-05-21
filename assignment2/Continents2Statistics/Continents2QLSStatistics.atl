@@ -1,0 +1,29 @@
+-- @path Families=/Continents2Statistics/Continents.ecore
+-- @path Persons=/Continents2Statistics/Statistics.ecore
+
+module QLSStatistics;
+create OUT: Statistics from IN: Continents;
+
+helper context Continents!Continent def : qualitativeValue(result: Real, low : Real, medium : Real) 
+: String =
+	if (result < low) then
+		'low' 
+	else if (result < medium) then
+			'medium'
+		else 
+			'high'
+			endif
+	endif;
+
+rule Continent2QLS {
+	from
+	c : Continents!Continent
+	to
+	out : Statistics!QLSContinent (
+		name <- c.name,
+		population <-  c.qualitativeValue(c.Country->collect(c | c.population)->sum(), 80, 500),
+		gdp <- c.qualitativeValue(c.Country->collect(c | c.gdp)->sum(), 100000, 1000000),
+		costOfLiving <- c.qualitativeValue(c.Country->collect(c | c.costOfLiving)->sum(), 500, 2000),
+		povertyLine <- c.qualitativeValue(c.Country->collect(c | c.povertyLine)->sum(), 16, 28)
+		)
+}

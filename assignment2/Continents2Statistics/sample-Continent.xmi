@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Continents="platform:/resource/Continents2Statistics/Continents.ecore">
+	<Continents:Continent name="Asia">
+		<Country name="China" population="1350" costOfLiving="731.14" gdp="8360000"
+		povertyLine="13.4" />
+		<Country name="India" population="1220" costOfLiving="452.1" gdp="1840000"
+		povertyLine="29.8" />
+		<Country name="Russia" population="142.5" costOfLiving="686.16" gdp="2009999.99"
+		povertyLine="12.7" />
+	</Continents:Continent>
+	<Continents:Continent name="Africa">
+		<Country name="Nigeria" population="174.51" costOfLiving="731.68" gdp="262610"
+		povertyLine="70" />
+		<Country name="South Africa" population="48.6" costOfLiving="1400.01" gdp="384310"
+		povertyLine="31.3" />
+		<Country name="Kenya" population="44.04" costOfLiving="481.21" gdp="37340"
+		povertyLine="50" />
+	</Continents:Continent>
+	<Continents:Continent name="Europe">
+	<Country name="Germany" population="81.15" costOfLiving="2851.85" gdp="3400000"
+		povertyLine="15.5" />
+		<Country name="France" population="65.95" costOfLiving="2761.99" gdp="2610000"
+		povertyLine="7.8" />
+		<Country name="Belgium" population="10.44" costOfLiving="2564.89" gdp="483710"
+		povertyLine="15.2" />
+	</Continents:Continent>
+	<Continents:Continent name="North America">
+		<Country name="United States" population="316.67" costOfLiving="3258.85" gdp
+		="15680000" povertyLine="15.1" />
+		<Country name="Mexico" population="116.22" costOfLiving="729.94" gdp="1180000"
+		povertyLine="51.3" />
+		<Country name="Cuba" population="11.06" costOfLiving="25.05" gdp="60810"
+		povertyLine="12.5" />
+	</Continents:Continent>
+	<Continents:Continent name="South America">
+		<Country name="Brazil" population="201.01" costOfLiving="757.92" gdp="2250000"
+		povertyLine="21.4" />
+		<Country name="Argentina" population="42.61" costOfLiving="1018.58" gdp="470530"
+		povertyLine="30" />
+		<Country name="Bolivia" population="10.46" costOfLiving="564.23" gdp="27040"
+		povertyLine="49.6" />
+	</Continents:Continent>
+</xmi:XMI>

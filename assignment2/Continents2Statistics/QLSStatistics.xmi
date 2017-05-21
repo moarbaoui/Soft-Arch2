@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Statistics="platform:/resource/Continents2Statistics/Statistics.ecore">
+  <Statistics:QLSContinent name="Asia" population="high" gdp="high" costOfLiving="medium" povertyLine="high"/>
+  <Statistics:QLSContinent name="Africa" population="medium" gdp="medium" costOfLiving="high" povertyLine="high"/>
+  <Statistics:QLSContinent name="Europe" population="medium" gdp="high" costOfLiving="high" povertyLine="high"/>
+  <Statistics:QLSContinent name="North America" population="medium" gdp="high" costOfLiving="high" povertyLine="high"/>
+  <Statistics:QLSContinent name="South America" population="medium" gdp="high" costOfLiving="high" povertyLine="high"/>
+</xmi:XMI>
